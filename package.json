@@ -1,0 +1,30 @@
+{
+  "name": "gitpoke",
+  "version": "0.1.0",
+  "description": "Head-to-head pokemon battles via git. Built on gitwar.",
+  "main": "gitpoke.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tybenz/gitpoke.git"
+  },
+  "keywords": [
+    "pokemon",
+    "game",
+    "gitwar"
+  ],
+  "author": "Tyler Benziger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tybenz/gitpoke/issues"
+  },
+  "homepage": "https://github.com/tybenz/gitpoke",
+  "dependencies": {
+    "colors": "~0.6.2",
+    "gitwar": "~0.1.3",
+    "lodash-node": "^2.4.1",
+    "mon": "0.0.7"
+  }
+}
