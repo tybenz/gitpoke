@@ -39,22 +39,23 @@ var Gitpoke = {
             var longest = _.reduce( moves, function( max, move ) {
                 return max > move.name.length ? max : move.name.length;
             }, 0 );
+            var i;
             var topLine = '┌──';
-            for ( var i = 0; i < longest; i ++ ) { topLine += '─'; }
-            topLine += '──┬──'
-            for ( var i = 0; i < longest; i ++ ) { topLine += '─'; }
+            for ( i = 0; i < longest; i++ ) { topLine += '─'; }
+            topLine += '──┬──';
+            for ( i = 0; i < longest; i++ ) { topLine += '─'; }
             topLine += '──┐\n│';
             var middleLine = '├──';
-            for ( var i = 0; i < longest; i ++ ) { middleLine += '─'; }
-            middleLine += '──┼──'
-            for ( var i = 0; i < longest; i ++ ) { middleLine += '─'; }
+            for ( i = 0; i < longest; i++ ) { middleLine += '─'; }
+            middleLine += '──┼──';
+            for ( i = 0; i < longest; i++ ) { middleLine += '─'; }
             middleLine += '──┤';
             var bottomLine = '└──';
-            for ( var i = 0; i < longest; i ++ ) { bottomLine += '─'; }
-            bottomLine += '──┴──'
-            for ( var i = 0; i < longest; i ++ ) { bottomLine += '─'; }
+            for ( i = 0; i < longest; i++ ) { bottomLine += '─'; }
+            bottomLine += '──┴──';
+            for ( i = 0; i < longest; i++ ) { bottomLine += '─'; }
             bottomLine += '──┘';
-            return moveNames = _.reduce( Gitpoke.mine.moves(), function( str, move, j ) {
+            return _.reduce( Gitpoke.mine.moves(), function( str, move, j ) {
                 if ( j == 2 ) {
                     str += '\n' + middleLine + '\n│';
                 }
@@ -64,8 +65,6 @@ var Gitpoke = {
                     str += ' ';
                 }
                 str += '  │';
-                if ( move < longest ) {
-                }
                 if ( j == 3 ) {
                     str += '\n' + bottomLine + '\nHow would you like to attack? ';
                 }
